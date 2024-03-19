@@ -4,7 +4,7 @@
     <TargetFramework>net472</TargetFramework>
     <AssemblyName>LookUp</AssemblyName>
     <Description>Template</Description>
-    <Version>1.0.0</Version>
+    <Version>0.0.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
@@ -32,12 +32,15 @@
     </Reference>
     <Reference Include="Opsive.Shared">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\Opsive.Shared.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Opsive.Shared.Utility">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\Opsive.Shared.Utility.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Opsive.UltimateCharacterController">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\Opsive.UltimateCharacterController.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\UnityEngine.dll</HintPath>
