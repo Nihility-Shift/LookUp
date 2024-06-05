@@ -2,13 +2,16 @@
 
 namespace LookUp
 {
-    [HarmonyPatch(typeof(CustomFirstPersonCombat), "UseLocalRotation", MethodType.Setter)]
+    [HarmonyPatch(typeof(CustomFirstPersonCombat), "YawLimit", MethodType.Setter)]
     internal class CustomFirstPersonCombatPatch
     {
         //Unlock first person yaw
-        static void Prefix(ref bool value)
+        static void Prefix(ref float value)
         {
-            value = false;
+            if (value < 180)
+            {
+                value = 180f;
+            }
         }
     }
 }
