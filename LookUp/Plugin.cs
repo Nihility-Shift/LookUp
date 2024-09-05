@@ -1,20 +1,16 @@
 ﻿using BepInEx;
+using BepInEx.Logging;
 using HarmonyLib;
 using System.Reflection;
 
 namespace LookUp
 {
-    static class MyPluginInfo
-    {
-        public const string PLUGIN_GUID = "id107.lookup";
-        public const string PLUGIN_NAME = "LookUp";
-        public const string PLUGIN_VERSION = "0.0.2";
-    }
-
-    [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+    [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.USERS_PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
     [BepInProcess("Void Crew.exe")]
+    [BepInDependency(VoidManager.MyPluginInfo.PLUGIN_GUID)]
     public class Plugin : BaseUnityPlugin
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "N/A")]
         public static Plugin Instance { get; private set; }
 
         private void Awake()
