@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Logging;
 using HarmonyLib;
 using System.Reflection;
 
@@ -9,10 +10,11 @@ namespace LookUp
     [BepInDependency("VoidManager")]
     public class BepinPlugin : BaseUnityPlugin
     {
-        //internal static ManualLogSource Log;
-        private void Awake()
+        internal static ManualLogSource Log;
+
+        public void Awake()
         {
-            //Log = Logger;
+            Log = Logger;
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID);
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         }
