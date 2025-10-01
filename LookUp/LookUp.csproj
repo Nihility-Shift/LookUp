@@ -24,35 +24,12 @@
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="VCMT.Thunderstore.DocBuilder" Version="0.2.4" />
+    <PackageReference Include="VCMT.VoidManager" Version="1.2.7" />
+    <PackageReference Include="VoidCrew.GameLibs" Version="1.2.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>E:\Program Files\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Opsive.Shared.Utility">
-      <HintPath>E:\Program Files\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\Opsive.Shared.Utility.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Opsive.UltimateCharacterController">
-      <HintPath>E:\Program Files\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\Opsive.UltimateCharacterController.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>E:\Program Files\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>E:\Program Files\Steam\steamapps\common\Void Crew\Void Crew_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="VoidManager">
-      <HintPath>E:\Program Files\Steam\steamapps\common\Void Crew\BepInEx\plugins\VoidManager.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Update="mscorlib">
@@ -104,7 +81,4 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="powershell.exe -NonInteractive -ExecutionPolicy RemoteSigned -NoProfile -file &quot;$(ProjectDir)PreBuild.ps1&quot; $(OutDir) $(SolutionDir)" />
-  </Target>
 </Project>
