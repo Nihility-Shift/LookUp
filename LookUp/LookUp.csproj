@@ -3,7 +3,7 @@
     <TargetFramework>net472</TargetFramework>
     <AssemblyName>LookUp</AssemblyName>
     <Description>Removes pesky camera limitations. Client Side.</Description>
-    <Version>0.0.4</Version>
+    <Version>1.0.5</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
@@ -12,7 +12,7 @@
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
     <RootNamespace>LookUp</RootNamespace>
-    <AssemblyTitle>Removes pesky camera limitations. Client Side.</AssemblyTitle>
+    <AssemblyTitle>Removes pesky camera limitations.</AssemblyTitle>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>embedded</DebugType>

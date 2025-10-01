@@ -9,5 +9,7 @@ namespace LookUp
         public override string Author => "18107, Dragon";
 
         public override string Description => "Gets rid of pesky camera limitations.";
+
+        public override string ThunderstoreID => MyPluginInfo.PLUGIN_THUNDERSTORE_ID;
     }
 }
